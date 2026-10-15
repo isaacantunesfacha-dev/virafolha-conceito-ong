@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 135" fill="none">
+  <defs>
+    <pattern id="scales" width="36" height="30" patternUnits="userSpaceOnUse">
+      <path d="M-18 1c10 0 17 5 18 13C1 22-6 29-18 30M18 1c10 0 17 5 18 13 1 8-6 15-18 16 10 0 17-7 18-16M0 1c10 0 17 5 18 13 1 8-6 15-18 16-12-1-19-8-18-16C-17 6-10 1 0 1Z" fill="#55b849" fill-opacity=".14" stroke="#d8f49a" stroke-opacity=".38" stroke-width="1.4"/>
+      <path d="M-8 8c4-3 12-3 16 0M10 23c4-3 10-3 14 0M-28 23c4-3 10-3 14 0" stroke="#d8f49a" stroke-opacity=".2" stroke-width="1" stroke-linecap="round"/>
+    </pattern>
+  </defs>
+  <path fill="url(#scales)" d="M0 0h180v135H0z"/>
+</svg>
