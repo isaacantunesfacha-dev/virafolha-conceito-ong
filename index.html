@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172b1c">
+  <meta name="description" content="Estudo conceitual de homepage bilíngue sobre infância quando a natureza faz parte do cotidiano.">
+  <meta property="og:title" content="ViraFolha | infância em contato com a natureza">
+  <meta property="og:description" content="Um estudo de homepage para uma organização que aproxima infância e natureza.">
+  <title>ViraFolha | natureza e descobertas · conceito</title>
+  <style>
+    @font-face { font-family: "Bagel Fat One"; src: url("assets/fonts/BagelFatOne-Regular.ttf") format("truetype"); font-style: normal; font-weight: 400; font-display: swap; }
+    @font-face { font-family: Onest; src: url("assets/fonts/Onest-Variable.ttf") format("truetype"); font-style: normal; font-weight: 100 900; font-display: swap; }
+    :root {
+      color-scheme: light;
+      --page: #ffffff;
+      --surface: #ffffff;
+      --surface-alt: #f0f4ed;
+      --ink: #172b1c;
+      --muted: #405546;
+      --line: #758474;
+      --forest: #172b1c;
+      --leaf: #55b849;
+      --leaf-soft: #c8e3b2;
+      --focus: #172b1c;
+      --font-scale: 100%;
+      --display: "Bagel Fat One", "Avenir Next", sans-serif;
+      --body: Onest, "Avenir Next", sans-serif;
+      --space-section: clamp(5rem, 10vw, 9rem);
+      font: 400 var(--font-scale)/1.6 var(--body);
+      color: var(--ink);
+      background: var(--page);
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+    body { margin: 0; min-width: 320px; background: var(--page); }
+    img { display: block; max-width: 100%; }
+    a { color: var(--forest); text-underline-offset: .22em; }
+    button { color: inherit; font: inherit; }
+    a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; box-shadow: 0 0 0 2px var(--page); }
+    .skip-link { position: absolute; z-index: 30; top: -5rem; left: 1rem; padding: .75rem 1rem; border-radius: .5rem; background: var(--surface); color: var(--ink); font-weight: 700; }
+    .skip-link:focus { top: 1rem; }
+    .concept-strip { padding: .5rem 1rem; background: var(--leaf); color: var(--ink); text-align: center; font-size: .74rem; font-weight: 700; letter-spacing: .03em; }
+    .site-head { background: var(--page); }
+    .head-tools { display: flex; min-height: 64px; justify-content: space-between; align-items: center; gap: 1rem; border-bottom: 1px solid var(--line); }
+    .brand { display: inline-flex; align-items: center; gap: .6rem; color: var(--ink); text-decoration: none; font: 400 1.5rem/1 "Bagel Fat One", "Avenir Next", sans-serif; letter-spacing: -.01em; }
+    .brand-mark { width: 2.4rem; height: 2.4rem; flex: 0 0 auto; display: grid; place-items: center; border-radius: 50%; background: var(--leaf); }
+    .brand-mark svg { width: 1.6rem; height: 1.6rem; }
+    .tools { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: .4rem; }
+    .tools-label { margin-right: .3rem; color: var(--muted); font-size: .72rem; }
+    .tool-button, .lang-button { min-width: 2.4rem; min-height: 2.35rem; padding: .35rem .65rem; border: 1px solid var(--line); border-radius: .5rem; background: var(--surface); font-size: .82rem; font-weight: 700; cursor: pointer; }
+    .tool-button:hover, .lang-button:hover { background: var(--surface-alt); }
+    .lang-button { min-width: 3.2rem; margin-left: .5rem; border-color: var(--ink); background: var(--ink); color: white; }
+    .main-nav { display: flex; flex-wrap: wrap; align-items: center; gap: clamp(.75rem, 2vw, 2rem); padding-block: 1rem; border-bottom: 1px solid var(--line); }
+    .main-nav a { color: var(--ink); font-size: .87rem; font-weight: 600; text-decoration: none; }
+    .main-nav a:hover { text-decoration: underline; }
+    .main-nav .nav-cta { margin-left: auto; padding: .55rem 1rem; border-radius: 999px; background: var(--leaf); color: var(--ink); }
+    .wrap { width: min(1200px, calc(100% - 3rem)); margin-inline: auto; }
+    .eyebrow { margin: 0 0 1rem; color: var(--forest); font-size: .76rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2 { font-family: var(--display); font-weight: 400; letter-spacing: -.01em; }
+    h1 { max-width: 10ch; margin-bottom: 1.25rem; font-size: clamp(3.6rem, 8.4vw, 7.5rem); line-height: .92; }
+    h2 { max-width: 15ch; margin-bottom: 1.25rem; font-size: clamp(2.8rem, 5.5vw, 5rem); line-height: .98; }
+    h3 { margin-bottom: .65rem; font-size: 1.3rem; line-height: 1.25; }
+    .lead { max-width: 39rem; margin-bottom: 1.5rem; color: var(--muted); font-size: clamp(1.05rem, 1.6vw, 1.2rem); line-height: 1.7; }
+    .hero { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: center; gap: clamp(2rem, 7vw, 6rem); padding-block: clamp(3.5rem, 7vw, 6.5rem) var(--space-section); }
+    .hero h1 span { color: var(--forest); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.8rem; }
+    .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: .55rem; padding: .78rem 1.2rem; border: 2px solid var(--leaf); border-radius: 999px; background: var(--leaf); color: var(--ink); font-size: .92rem; font-weight: 800; text-decoration: none; transition: transform .2s, background .2s; }
+    .button:hover { transform: translateY(-2px); background: var(--forest); border-color: var(--forest); color: white; }
+    .button.secondary { background: transparent; color: var(--ink); border-color: var(--ink); }
+    .button.secondary:hover { background: var(--surface-alt); }
+    .hero-media { position: relative; min-height: 450px; }
+    .hero-media::after { content: "CONCEITO · ViraFolha"; position: absolute; top: 1rem; right: 1rem; padding: .45rem .7rem; border: 1px solid #ffffffa8; border-radius: 999px; background: #172b1ccc; color: #fff; font-size: .62rem; font-weight: 800; letter-spacing: .09em; }
+    .hero-photo { width: 100%; height: min(62vw, 600px); min-height: 450px; object-fit: cover; object-position: center; border-radius: 48% 48% 1rem 1rem; background: var(--surface-alt); }
+    .photo-credit { margin: .55rem 0 0; color: var(--muted); font-size: .72rem; line-height: 1.45; }
+    .photo-credit a { color: inherit; }
+    .mascot-sticker { position: absolute; left: -3.2rem; bottom: 3rem; width: clamp(7.5rem, 18vw, 12rem); padding: .65rem; border: 4px solid var(--page); border-radius: 50%; background: var(--leaf); box-shadow: 0 10px 28px #172b1c21; transform: rotate(-7deg); }
+    .mascot-sticker img { width: 100%; }
+    .section { padding-block: var(--space-section); }
+    .section-header { display: grid; grid-template-columns: 1fr minmax(16rem, .65fr); align-items: end; gap: 3rem; margin-bottom: clamp(2rem, 5vw, 4rem); }
+    .section-header h2 { margin-bottom: 0; }
+    .section-header > p { max-width: 37rem; margin-bottom: .3rem; color: var(--muted); line-height: 1.8; }
+    .editorial { background: var(--surface-alt); }
+    .editorial-grid { display: grid; grid-template-columns: .85fr 1.15fr; align-items: center; gap: clamp(2rem, 7vw, 6rem); }
+    .editorial-photo { width: 100%; height: 470px; object-fit: cover; border-radius: 1rem 10rem 1rem 1rem; background: var(--surface-alt); }
+    .editorial-copy p:not(.eyebrow) { max-width: 40rem; color: var(--muted); line-height: 1.85; }
+    .editorial-quote { margin: 1.6rem 0; padding-left: 1.4rem; border-left: 5px solid var(--leaf); font: 400 clamp(1.45rem, 3vw, 2.1rem)/1.25 var(--display); }
+    .idea-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+    .idea-item { padding: 1.35rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--surface); }
+    .idea-number { display: block; margin-bottom: 1.15rem; color: var(--forest); font: 400 2rem/1 var(--display); }
+    .idea-item p { max-width: 25rem; margin-bottom: 0; color: var(--muted); font-size: .94rem; line-height: 1.7; }
+    .channel-system { background: var(--surface-alt); }
+    .channel-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 1.25rem; align-items: stretch; }
+    .channel-card { padding: clamp(1.25rem, 3vw, 2rem); border: 2px solid var(--ink); border-radius: 1rem; background: var(--surface); }
+    .newsletter-card { grid-column: 1 / -1; width: min(100%, 620px); justify-self: center; }
+    .newsletter-card input[type="email"] { width: 100%; min-height: 48px; padding: .65rem .8rem; border: 2px solid var(--line); border-radius: .55rem; background: var(--surface); color: var(--ink); font: inherit; }
+    .newsletter-card input[type="checkbox"] { width: 1.2rem; height: 1.2rem; margin: 0 .4rem .1rem 0; vertical-align: middle; accent-color: var(--forest); }
+    .newsletter-card label { line-height: 1.6; }
+    .channel-meta { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.25rem; color: var(--forest); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .email-shell { overflow: hidden; border: 1px solid var(--line); border-radius: .75rem; background: white; }
+    .email-brand { padding: .9rem 1rem; font: 400 1.2rem/1 "Bagel Fat One", "Avenir Next", sans-serif; }
+    .email-hero { display: grid; grid-template-columns: 1fr .7fr; align-items: center; min-height: 155px; padding: 1rem; background: var(--leaf); }
+    .email-hero strong { max-width: 13ch; font: 400 1.55rem/1.12 var(--display); }
+    .email-hero img { width: min(100%, 112px); justify-self: end; }
+    .email-body { padding: 1rem; }
+    .email-body p { max-width: 34rem; margin-bottom: .85rem; color: var(--muted); font-size: .86rem; line-height: 1.6; }
+    .email-link { display: inline-block; padding: .5rem .8rem; border-radius: 999px; background: var(--forest); color: white; font-size: .76rem; font-weight: 800; text-decoration: none; }
+    .device-previews { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: center; gap: .75rem; }
+    .phone { flex: 1 1 165px; width: min(100%, 220px); max-width: 220px; margin: 0 auto; padding: .42rem; border: 5px solid #111713; border-radius: 2rem; background: #111713; box-shadow: 0 14px 28px #172b1c22, inset 0 0 0 1px #ffffff45; }
+    .phone-screen { min-height: 290px; padding: .72rem .62rem 1rem; border-radius: 1.55rem; background: linear-gradient(180deg,#edf4e9 0 34%,#fff 34%); }
+    .phone-top { display: flex; justify-content: space-between; align-items: center; margin: 0 auto .8rem; font-size: .56rem; font-weight: 800; }
+    .phone-island { width: 4rem; height: .8rem; margin: 0 auto .85rem; border-radius: 99px; background: #111713; }
+    .phone-contact { display: grid; justify-items: center; gap: .2rem; margin-bottom: 1rem; font-size: .62rem; font-weight: 800; }
+    .phone-avatar { width: 1.8rem; height: 1.8rem; display: grid; place-items: center; border-radius: 50%; background: var(--leaf); font-size: .82rem; }
+    .sms-bubble { max-width: 97%; margin: 0 auto .55rem; padding: .68rem; border-radius: .95rem .95rem .95rem .25rem; background: #e8f0e3; font-size: .72rem; line-height: 1.55; }
+    .sms-time { display: block; margin: .6rem 0 0; color: var(--muted); font-size: .69rem; }
+    .watch { flex: 0 0 86px; display: flex; flex-direction: column; align-items: center; filter: drop-shadow(0 10px 12px #172b1c22); }
+    .watch-strap { position: relative; width: 2.45rem; height: 1.55rem; border: 1px solid #98a796; background: repeating-linear-gradient(90deg,#dce7d4 0 4px,#cbd8c4 4px 5px); }
+    .watch-strap.top { border-radius: 1rem 1rem .3rem .3rem; }
+    .watch-strap.bottom { border-radius: .3rem .3rem 1rem 1rem; }
+    .watch-case { z-index: 1; width: 4.6rem; padding: .28rem; border: 2px solid #b7c0b8; border-radius: 1.2rem; background: linear-gradient(135deg,#404a43,#141a16 42%,#323b34); }
+    .watch-screen { min-height: 6rem; display: grid; align-content: center; padding: .43rem .34rem; border-radius: .86rem; background: #f8fbf6; text-align: center; }
+    .watch-screen small { display: block; margin-bottom: .25rem; color: var(--forest); font-size: .46rem; font-weight: 800; text-transform: uppercase; }
+    .watch-screen p { margin: 0; font-size: .52rem; line-height: 1.35; }
+    .channel-note { margin: 1rem 0 0; color: var(--muted); font-size: .75rem; line-height: 1.55; }
+    .paths { background: var(--forest); color: white; }
+    .paths .eyebrow { color: var(--leaf-soft); }
+    .paths .section-header > p { color: var(--surface-alt); }
+    .path-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .path-card { min-height: 290px; display: flex; flex-direction: column; align-items: flex-start; padding: clamp(1.5rem, 4vw, 2.75rem); border-radius: 1rem; background: var(--surface); color: var(--ink); }
+    .path-card:nth-child(2) { background: var(--leaf-soft); }
+    .path-card .eyebrow { color: var(--forest); }
+    .path-card p { max-width: 34rem; color: var(--muted); line-height: 1.75; }
+    .path-card .text-link { margin-top: auto; color: var(--ink); font-weight: 800; text-decoration-thickness: 2px; }
+    .trust { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(2rem, 7vw, 6rem); align-items: center; }
+    .trust-copy > p:not(.eyebrow) { max-width: 42rem; color: var(--muted); line-height: 1.8; }
+    .trust-board { padding: clamp(1.2rem, 3vw, 2rem); border: 2px solid var(--ink); border-radius: 1rem; background: var(--surface); }
+    .board-label { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line); font-size: .84rem; font-weight: 800; }
+    .board-label span:last-child { color: var(--muted); font-size: .72rem; font-weight: 500; }
+    .record { display: grid; grid-template-columns: 2.8rem 1fr auto; align-items: center; gap: .85rem; padding-block: 1rem; border-bottom: 1px solid var(--line); }
+    .record-icon { width: 2.7rem; height: 2.7rem; display: grid; place-items: center; border-radius: 50%; background: var(--surface-alt); font-size: 1.1rem; font-weight: 800; }
+    .record:nth-child(3) .record-icon { background: var(--leaf); }
+    .record:nth-child(4) .record-icon { background: var(--leaf-soft); }
+    .record strong { display: block; font-size: .88rem; }
+    .record small { color: var(--muted); font-size: .74rem; }
+    .record-tag { padding: .3rem .55rem; border: 1px solid var(--ink); border-radius: 999px; font-size: .68rem; white-space: nowrap; }
+    .board-note { margin: 1rem 0 0; color: var(--muted); font-size: .76rem; line-height: 1.6; }
+    .close-cta { position: relative; isolation: isolate; overflow: hidden; padding-block: var(--space-section); background: #0d5738 url("assets/textura-bosque.svg") center / cover; color: white; }
+    .close-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 2rem; }
+    .close-flor { position: absolute; z-index: 0; top: 0; right: 0; width: min(38vw, 470px); height: auto; opacity: .32; pointer-events: none; transform: rotate(4deg); transform-origin: 70% 50%; }
+    .close-cta .eyebrow { color: #d8f49a; }
+    .close-cta h2 { max-width: 13ch; margin-bottom: .75rem; }
+    .close-cta p:not(.eyebrow) { max-width: 43rem; margin-bottom: 0; color: #f2f6ed; line-height: 1.75; }
+    .close-cta .button { background: #d8f49a; border-color: #d8f49a; color: #142a1b; white-space: nowrap; }
+    footer { padding-block: 2rem; background: var(--ink); color: white; }
+    .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+    .footer-grid p { max-width: 45rem; margin: 0; color: var(--surface-alt); font-size: .78rem; line-height: 1.65; }
+    .footer-brand { color: white; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: flex-end; }
+    .footer-links a { color: white; font-size: .82rem; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    body.high-contrast { --page: #fff; --surface: #fff; --surface-alt: #fff; --ink: #000; --muted: #111; --line: #000; --forest: #000; --leaf: #ff0; --leaf-soft: #ff0; --focus: #000; color: #000; }
+    body.high-contrast .concept-strip, body.high-contrast .path-card:nth-child(2), body.high-contrast .close-cta { background: #ff0; color: #000; }
+    body.high-contrast .paths, body.high-contrast footer, body.high-contrast .lang-button, body.high-contrast .main-nav .nav-cta, body.high-contrast .button { background: #000; color: #fff; }
+    body.high-contrast .button.secondary { background: #fff; color: #000; }
+    body.high-contrast a:focus-visible, body.high-contrast button:focus-visible, body.high-contrast input:focus-visible { outline-color: #ff0; box-shadow: 0 0 0 6px #000; }
+    body.high-contrast .paths .section-header > p, body.high-contrast .footer-grid p, body.high-contrast .footer-links a { color: #fff; }
+    body.high-contrast .close-cta p:not(.eyebrow), body.high-contrast .close-cta .eyebrow { color: #000; }
+    body.high-contrast .close-cta .close-flor { opacity: .15; }
+    body.high-contrast .path-card:nth-child(2) .text-link { color: #000; }
+    @media (max-width: 800px) {
+      .wrap { width: min(100% - 2rem, 620px); }
+      .head-tools { min-height: 60px; }
+      .tools-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+      .main-nav { gap: .55rem 1rem; }
+      .main-nav a { font-size: .82rem; }
+      .main-nav .nav-cta { margin-left: 0; }
+      .hero, .editorial-grid, .trust { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero { padding-top: 3.25rem; }
+      h1 { max-width: 11ch; font-size: clamp(2.9rem, 12vw, 6.2rem); }
+      .hero-media { width: min(100% - 1rem, 500px); margin-inline: auto; }
+      .email-hero { grid-template-columns: 1fr auto; gap: .5rem; }
+      .email-hero strong { font-size: clamp(1.25rem, 7vw, 1.55rem); }
+      .hero-photo { height: 112vw; min-height: 350px; max-height: 530px; }
+      .mascot-sticker { left: -1.2rem; bottom: 2.5rem; }
+      .section-header { grid-template-columns: 1fr; gap: 1rem; }
+      .editorial-photo { height: min(105vw, 440px); }
+      .idea-list { grid-template-columns: 1fr; gap: 1.5rem; }
+      .idea-item { display: grid; grid-template-columns: 2.5rem 1fr; gap: .85rem; padding: 0; }
+      .idea-number { margin: 0; }
+      .path-grid { grid-template-columns: 1fr; }
+      .channel-grid { grid-template-columns: 1fr; }
+      .path-card { min-height: 230px; }
+      .close-grid { grid-template-columns: 1fr; }
+      .close-cta .button { justify-self: start; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-links { justify-content: flex-start; }
+    }
+    @media (max-width: 430px) {
+      .head-tools { flex-wrap: wrap; padding-block: .5rem; }
+      .brand { font-size: 1.25rem; }
+      .brand-mark { width: 2.05rem; height: 2.05rem; }
+      .tools { gap: .25rem; }
+      .tool-button { min-width: 2.15rem; padding-inline: .45rem; }
+      .lang-button { min-width: 2.8rem; margin-left: .15rem; }
+      .main-nav { display: grid; grid-template-columns: 1fr 1fr; }
+      .main-nav .nav-cta { justify-self: start; }
+      .record { grid-template-columns: 2.5rem 1fr; }
+      .record-tag { grid-column: 2; justify-self: start; }
+      .close-flor { width: 58vw; opacity: .22; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .close-cta:hover .close-flor, .close-cta:focus-within .close-flor { animation: flower-sway 1.8s ease-in-out infinite alternate; }
+      @keyframes flower-sway { from { transform: rotate(4deg) translateY(0); } to { transform: rotate(-2deg) translateY(-6px); } }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Pular para o conteúdo</a>
+  <div class="concept-strip" data-i18n="concept">ESTUDO DE CONCEITO · ViraFolha</div>
+  <header class="site-head">
+    <div class="wrap head-tools">
+      <a class="brand" href="#inicio">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 25V14m0 6C9 20 7 15 7 10c6 0 9 3 9 10Zm0-4c0-6 4-9 10-9 0 6-4 9-10 9Z" stroke="#172b1c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        ViraFolha
+      </a>
+      <div class="tools" role="group" aria-label="Controles de acessibilidade e idioma" data-i18n-aria="toolsLabel">
+        <span class="tools-label" data-i18n="access">Acessibilidade</span>
+        <button class="tool-button" id="smaller" type="button" aria-label="Diminuir texto" data-i18n-aria="smaller">A−</button>
+        <button class="tool-button" id="larger" type="button" aria-label="Aumentar texto" data-i18n-aria="larger">A+</button>
+        <button class="tool-button" id="contrast" type="button" aria-pressed="false" aria-label="Ativar alto contraste" data-i18n-aria="contrast">◐</button>
+        <button class="lang-button" id="lang-toggle" type="button" aria-label="Switch to English" data-i18n-aria="language">EN</button>
+        <span class="sr-only" id="control-status" aria-live="polite"></span>
+      </div>
+    </div>
+    <nav class="wrap main-nav" aria-label="Navegação principal" data-i18n-aria="navLabel">
+      <a href="#ideia" data-i18n="navIdea">A ideia</a>
+      <a href="#experiencias" data-i18n="navExperiences">Nossa história</a>
+      <a href="#canais" data-i18n="navChannels">Contatos</a>
+      <a href="#caminhos" data-i18n="navPaths">Como chegar junto</a>
+      <a href="#cuidado" data-i18n="navCare">Cuidado e transparência</a>
+      <a class="nav-cta" href="#caminhos" data-i18n="navCta">Faça parte <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="wrap hero" id="inicio" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow" data-i18n="heroEyebrow">Natureza, descoberta e convivência</p>
+        <h1 id="hero-title"><span data-i18n="heroTitle">A infância fica ainda melhor</span> <span data-i18n="heroAccent">quando a natureza faz parte do cotidiano.</span></h1>
+        <p class="lead" data-i18n="heroLead">A natureza desperta curiosidade, cria vínculos e transforma momentos do cotidiano em descobertas compartilhadas.</p>
+        <div class="hero-actions">
+          <a class="button" href="#caminhos"><span data-i18n="heroPrimary">Explorar formas de participar</span><span aria-hidden="true">↗</span></a>
+          <a class="button secondary" href="#ideia" data-i18n="heroSecondary">Por que essa relação importa</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img class="hero-photo" src="assets/ilustracao-copa.svg" width="1200" height="800" alt="Ilustração original de folhas e copa em tons de verde e amarelo." data-i18n-alt="heroAlt" fetchpriority="high" decoding="async">
+        <div class="mascot-sticker"><img src="assets/mascote-semente-curiosa.svg" alt="Mascote conceitual: uma sementinha curiosa com broto, mochila e lupa." data-i18n-alt="mascotAlt"></div>
+      </div>
+    </section>
+
+    <section class="editorial section" id="ideia" aria-labelledby="idea-title">
+      <div class="wrap editorial-grid">
+        <div>
+          <img class="editorial-photo" src="assets/ilustracao-raizes.svg" width="1000" height="760" alt="Ilustração de raízes sob a terra ligadas a folhas acima do solo." data-i18n-alt="storyAlt" loading="lazy" decoding="async">
+        </div>
+        <div class="editorial-copy">
+          <p class="eyebrow" data-i18n="ideaEyebrow">Natureza, lugar que compartilhamos</p>
+          <h2 id="idea-title" data-i18n="ideaTitle">A natureza é o nosso lugar em comum.</h2>
+          <p data-i18n="ideaP1">Quando a natureza faz parte do cotidiano, aprender ganha corpo. Observar, experimentar e fazer perguntas cria vínculos com o lugar onde vivemos. Uma organização pode aproximar famílias e comunidades desse aprendizado e cultivar cuidado com o que é de todos.</p>
+          <p class="editorial-quote"><a href="#experiencias" data-i18n="ideaQuote">Veja como a educação começa pelo que se vive ↗</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section" id="experiencias" aria-labelledby="experience-title">
+      <div class="section-header">
+          <div><p class="eyebrow" data-i18n="experienceEyebrow">Aprender também acontece vivendo</p><h2 id="experience-title" data-i18n="experienceTitle">Aprender com a natureza</h2></div>
+        <p data-i18n="experienceLead">Um percurso de curiosidade, convivência e cuidado pode transformar momentos cotidianos em aprendizagem significativa.</p>
+      </div>
+      <div class="idea-list">
+        <article class="idea-item"><span class="idea-number" aria-hidden="true">01</span><div><h3 data-i18n="ideaOneTitle">Explorar</h3><p data-i18n="ideaOne">Observar de perto, comparar, experimentar e descobrir novas perguntas.</p></div></article>
+        <article class="idea-item"><span class="idea-number" aria-hidden="true">02</span><div><h3 data-i18n="ideaTwoTitle">Criar vínculos</h3><p data-i18n="ideaTwo">Aprender em relação com a família, a comunidade e o lugar onde vivem.</p></div></article>
+        <article class="idea-item"><span class="idea-number" aria-hidden="true">03</span><div><h3 data-i18n="ideaThreeTitle">Cuidar juntos</h3><p data-i18n="ideaThree">Aproximar escola, família e comunidade em torno do cuidado com a natureza.</p></div></article>
+      </div>
+      <p class="photo-credit" data-i18n="hypothesis">Explorar, criar vínculos e cuidar juntos: três fios que podem conduzir essa história.</p>
+    </section>
+
+    <section class="channel-system section" id="canais" aria-labelledby="channel-title">
+      <div class="wrap">
+        <div class="section-header">
+          <div><p class="eyebrow" data-i18n="channelEyebrow">Exemplos visuais · sem contato ativo</p><h2 id="channel-title" data-i18n="channelTitle">Contatos</h2></div>
+          <p data-i18n="channelLead">A mesma identidade acompanha as descobertas por email, celular e relógio.</p>
+        </div>
+        <div class="channel-grid">
+          <article class="channel-card" aria-label="Exemplo visual de email; não é contato real nem há envio ativo" data-i18n-aria="emailCardLabel">
+            <div class="channel-meta"><span data-i18n="emailLabel">Exemplo de email · conceito</span><span aria-hidden="true">01</span></div>
+            <div class="email-shell">
+              <div class="email-brand">ViraFolha</div>
+              <div class="email-hero"><strong data-i18n="emailHeadline">O cotidiano guarda pequenas descobertas.</strong><img src="assets/mascote-semente-curiosa.svg" alt="" aria-hidden="true"></div>
+              <div class="email-body"><p data-i18n="emailBody">Um detalhe na calçada. Um som entre árvores. Uma pergunta no meio do caminho. A natureza se revela quando a gente aprende a reparar.</p><a class="email-link" href="#ideia" data-i18n="emailLink">Ver a ideia</a></div>
+            </div>
+            <p class="channel-note" data-i18n="emailNote">Uma carta breve para levar a curiosidade da infância até o dia a dia.</p>
+          </article>
+          <article class="channel-card" aria-label="Exemplo visual de SMS; não é contato real nem há envio ativo" data-i18n-aria="smsCardLabel">
+            <div class="channel-meta"><span data-i18n="smsLabel">Exemplo de SMS · conceito</span><span aria-hidden="true">02</span></div>
+            <div class="device-previews">
+              <div class="phone" aria-label="Prévia de mensagem em celular">
+                <div class="phone-screen">
+                  <div class="phone-top" aria-hidden="true"><span>9:41</span><span>● ● ▰</span></div>
+                  <div class="phone-island" aria-hidden="true"></div>
+                  <div class="phone-contact"><span class="phone-avatar" aria-hidden="true">V</span><span>ViraFolha</span></div>
+                  <p class="sms-bubble" data-i18n="smsBody">A sombra mudou de lugar. Quem reparou primeiro? 🌿</p>
+                  <span class="sms-time" data-i18n="smsTime">Uma ideia para levar para casa</span>
+                </div>
+              </div>
+              <div class="watch" aria-hidden="true">
+                <span class="watch-strap top"></span>
+                <div class="watch-case"><div class="watch-screen"><small>ViraFolha</small><p data-i18n="watchMessage">A sombra mudou de lugar. Quem reparou?</p></div></div>
+                <span class="watch-strap bottom"></span>
+              </div>
+            </div>
+            <p class="channel-note" data-i18n="smsNote">Uma ideia curta, feita para caber na rotina, de uma tela à outra.</p>
+          </article>
+          <article class="channel-card newsletter-card" aria-labelledby="newsletter-title">
+            <div class="channel-meta"><span data-i18n="newsletterLabel">Newsletter · demonstração</span><span aria-hidden="true">03</span></div>
+            <h3 id="newsletter-title" data-i18n="newsletterTitle">Novidades para acompanhar de perto</h3>
+            <p class="channel-note" id="newsletter-note" data-i18n="newsletterNote">Uma pequena pausa para compartilhar novas descobertas com a família.</p>
+            <div role="group" aria-describedby="newsletter-note" aria-labelledby="newsletter-title">
+              <p><label for="newsletter-email" data-i18n="newsletterEmailLabel">Seu email</label><br>
+              <input id="newsletter-email" type="email" autocomplete="off" aria-describedby="newsletter-note newsletter-status" data-i18n-placeholder="newsletterPlaceholder" placeholder="voce@exemplo.com"></p>
+              <p><label for="newsletter-consent"><input id="newsletter-consent" type="checkbox"> <span data-i18n="newsletterConsent">Aceito receber novidades por email.</span></label></p>
+              <p><button class="email-link button" id="newsletter-demo-button" type="button" data-i18n="newsletterButton">Ver exemplo</button></p>
+              <p class="channel-note" id="newsletter-status" aria-live="polite" data-i18n="newsletterStatus">Nenhuma inscrição será feita.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="paths section" id="caminhos" aria-labelledby="paths-title">
+      <div class="wrap">
+        <div class="section-header">
+          <div><p class="eyebrow" data-i18n="pathsEyebrow">Um lugar para cada intenção</p><h2 id="paths-title" data-i18n="pathsTitle">Qual caminho combina com você?</h2></div>
+          <p data-i18n="pathsLead">Para famílias e educadores, uma forma de participar. Para quem apoia, um começo de conversa sobre parceria.</p>
+        </div>
+        <div class="path-grid">
+          <article class="path-card" id="participar">
+            <p class="eyebrow" data-i18n="familyLabel">Famílias e educadores</p>
+            <h3 data-i18n="familyTitle">Quero mais experiências com a natureza para minha família.</h3>
+            <p data-i18n="familyText">Experiências que abrem espaço para imaginar, criar vínculos e descobrir com autonomia.</p>
+            <a class="text-link" href="#experiencias" data-i18n="familyLink">Conhecer a proposta <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="path-card" id="apoiar">
+            <p class="eyebrow" data-i18n="partnerLabel">Apoiadores e parceiros</p>
+            <h3 data-i18n="partnerTitle">Quero aproximar minha organização dessa causa.</h3>
+            <p data-i18n="partnerText">Escolas, coletivos e apoiadores podem ajudar a criar mais oportunidades de convivência e aprendizagem com a natureza.</p>
+            <a class="text-link" href="#cuidado" data-i18n="partnerLink">Ver transparência e dados <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section trust" id="cuidado" aria-labelledby="care-title">
+      <div class="trust-copy">
+        <p class="eyebrow" data-i18n="careEyebrow">Confiança também faz parte da experiência</p>
+        <h2 id="care-title" data-i18n="careTitle">Cuidado com as pessoas, clareza em cada passo.</h2>
+        <p data-i18n="careText">A confiança cresce quando as famílias encontram informação clara, uma equipe próxima e espaço para participar. Cada contato pode abrir novas descobertas, fortalecer vínculos e aproximar a comunidade da natureza.</p>
+      </div>
+      <div class="trust-board" aria-label="Exemplo visual de como um CRM pode organizar interesses e próximos passos." data-i18n-aria="boardLabel">
+        <div class="board-label"><span data-i18n="boardTitle">Conversas com próximo passo</span><span data-i18n="boardStatus">Exemplo de CRM</span></div>
+        <div class="record"><span class="record-icon" aria-hidden="true">↗</span><span><strong data-i18n="recordOne">Interesse em participar</strong><small data-i18n="recordOneSub">Próximo passo explicado à família</small></span><span class="record-tag" data-i18n="recordOneTag">Participação</span></div>
+        <div class="record"><span class="record-icon" aria-hidden="true">✳</span><span><strong data-i18n="recordTwo">Possível parceria</strong><small data-i18n="recordTwoSub">Retorno combinado com a equipe</small></span><span class="record-tag" data-i18n="recordTwoTag">Parceria</span></div>
+        <div class="record"><span class="record-icon" aria-hidden="true">✓</span><span><strong data-i18n="recordThree">Preferência registrada</strong><small data-i18n="recordThreeSub">Consentimento e acesso definidos</small></span><span class="record-tag" data-i18n="recordThreeTag">Cuidado</span></div>
+        <p class="board-note" data-i18n="boardNote">Um retrato simples de como a equipe pode acolher cada interesse e dar continuidade às conversas.</p>
+      </div>
+    </section>
+
+    <section class="close-cta" id="nota" aria-labelledby="note-title">
+      <img class="close-flor" src="assets/flor-girassol-conceitual.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <div class="wrap close-grid">
+        <div>
+          <h2 id="note-title" data-i18n="noteTitle">Uma presença digital que aproxima a ONG das famílias.</h2>
+          <p data-i18n="noteText">Meu trabalho com a Gina une CRM, conteúdo e relacionamento. Posso aplicar esse olhar à presença digital da ONG. Se fizer sentido, me chama para um papo breve.</p>
+        </div>
+        <a class="button" href="#canais" data-i18n="noteCta">Conversar comigo <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap footer-grid">
+      <div><a class="brand footer-brand" href="#inicio">ViraFolha</a><p data-i18n="footerNote">© 2026 ViraFolha · Conceito visual por Isaac Antunes</p><p><a href="https://www.behance.net/isaacantunes" target="_blank" rel="noopener noreferrer">Behance <span aria-hidden="true">↗</span></a> · <a href="https://www.linkedin.com/in/isaacnandes/?isSelfProfile=true" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></p></div>
+      <div class="footer-links"><a href="#ideia" data-i18n="navIdea">A ideia</a><a href="#caminhos" data-i18n="navPaths">Como chegar junto</a><a href="#nota" data-i18n="footerConcept">Sobre este conceito</a></div>
+    </div>
+  </footer>
+  <script>
+    const copy = {
+      pt: {
+        pageTitle: "ViraFolha | natureza e descobertas · conceito", pageDescription: "Estudo conceitual bilíngue para uma organização que aproxima famílias e natureza.", ogTitle: "ViraFolha | infância em contato com a natureza", ogDescription: "Um estudo de homepage para uma organização que aproxima infância e natureza.",
+        skip: "Pular para o conteúdo", socialPendingLabel: "Prévia de ícones sociais; canais e links oficiais a definir com a ONG", socialPending: "Redes a definir", concept: "ESTUDO DE CONCEITO · ViraFolha", toolsLabel: "Controles de acessibilidade e idioma", access: "Acessibilidade", smaller: "Diminuir texto", larger: "Aumentar texto", contrast: "Ativar alto contraste", language: "Switch to English", navLabel: "Navegação principal", navIdea: "A ideia", navExperiences: "Aprendizado", navChannels: "Contatos", navPaths: "Como chegar junto", navCare: "Cuidado e transparência", navCta: "Faça parte <span aria-hidden=\"true\">↗</span>",
+        heroEyebrow: "Natureza, descoberta e convivência", heroTitle: "A infância fica ainda melhor", heroAccent: "quando a natureza faz parte do cotidiano.", heroLead: "A natureza desperta curiosidade, cria vínculos e transforma momentos do cotidiano em descobertas compartilhadas.", heroPrimary: "Explorar formas de participar", heroSecondary: "Por que essa relação importa", heroAlt: "Ilustração original de folhas e copa em tons de verde e amarelo.", mascotAlt: "Mascote conceitual: uma sementinha curiosa com broto, mochila e lupa.", 
+        ideaEyebrow: "Natureza, lugar que compartilhamos", ideaTitle: "A natureza é o nosso lugar em comum.", ideaP1: "Quando a natureza faz parte do cotidiano, aprender ganha corpo. Observar, experimentar e fazer perguntas cria vínculos com o lugar onde vivemos. Uma organização pode aproximar famílias e comunidades desse aprendizado e cultivar cuidado com o que é de todos.", ideaQuote: "Veja como a educação começa pelo que se vive ↗", storyAlt: "Ilustração de raízes sob a terra ligadas a folhas acima do solo.",
+        experienceEyebrow: "Aprender também acontece vivendo", experienceTitle: "Aprender com a natureza", experienceLead: "Curiosidade, convivência e cuidado podem transformar momentos cotidianos em aprendizagem significativa.", ideaOneTitle: "Explorar", ideaOne: "Observar de perto, comparar, experimentar e descobrir novas perguntas.", ideaTwoTitle: "Criar vínculos", ideaTwo: "Aprender em relação com a família, a comunidade e o lugar onde vivem.", ideaThreeTitle: "Cuidar juntos", ideaThree: "Aproximar escola, família e comunidade em torno do cuidado com a natureza.", hypothesis: "Explorar, criar vínculos e cuidar juntos: três fios que podem conduzir essa história.", channelEyebrow: "Exemplos visuais · sem contato ativo", channelTitle: "Contatos", channelLead: "A mesma identidade acompanha as descobertas por email, celular e relógio.", newsletterLabel: "Newsletter · demonstração", newsletterTitle: "Novidades para acompanhar de perto", newsletterNote: "Uma pequena pausa para compartilhar novas descobertas com a família.", newsletterEmailLabel: "Seu email", newsletterPlaceholder: "voce@exemplo.com", newsletterConsent: "Aceito receber novidades por email.", newsletterButton: "Ver exemplo", newsletterStatus: "Nenhuma inscrição será feita.", newsletterNoConsent: "Selecione o consentimento demonstrativo para ver a mensagem de exemplo.", newsletterInvalidEmail: "Digite um email válido apenas para concluir esta simulação; nada será enviado.", newsletterNoSend: "Consentimento demonstrativo selecionado. Nada foi armazenado ou enviado e nenhuma inscrição foi criada.", emailCardLabel: "Exemplo visual de email; não é contato real nem há envio ativo", smsCardLabel: "Exemplo visual de SMS; não é contato real nem há envio ativo", emailLabel: "Exemplo de email · conceito", emailHeadline: "Curiosidade que cria raízes.", emailBody: "Um detalhe pode revelar um mundo inteiro. Cada mensagem traz uma descoberta para o cotidiano.", emailLink: "Conhecer a proposta", emailNote: "Uma carta breve para levar a curiosidade da infância até o dia a dia.", smsLabel: "Exemplo de SMS · conceito", watchMessage: "A sombra mudou de lugar. Quem reparou?", smsBody: "A sombra mudou de lugar. Quem reparou primeiro? 🌿", smsTime: "Uma ideia para levar para casa", smsNote: "Uma mensagem breve, de uma tela à outra.",
+        pathsEyebrow: "Um lugar para cada intenção", pathsTitle: "Qual caminho combina com você?", pathsLead: "Para famílias e educadores, uma forma de participar. Para quem apoia, um começo de conversa sobre parceria.", familyLabel: "Famílias e educadores", familyTitle: "Quero mais experiências com a natureza para minha família.", familyText: "Experiências que abrem espaço para imaginar, criar vínculos e descobrir com autonomia.", familyLink: "Ver possibilidades para famílias <span aria-hidden=\"true\">↗</span>", partnerLabel: "Apoiadores e parceiros", partnerTitle: "Quero aproximar minha organização dessa causa.", partnerText: "Escolas, coletivos e apoiadores podem ajudar a criar mais oportunidades de convivência e aprendizagem com a natureza.", partnerLink: "Explorar parceria <span aria-hidden=\"true\">↗</span>",
+        careEyebrow: "Confiança também faz parte da experiência", careTitle: "Cuidado com as pessoas, clareza em cada passo.", careText: "A confiança cresce quando as famílias encontram informação clara, uma equipe próxima e espaço para participar. Cada conversa pode abrir novas descobertas, fortalecer vínculos e aproximar a comunidade da natureza.", boardLabel: "Exemplo visual de como um CRM pode organizar interesses e próximos passos.", boardTitle: "Conversas com próximo passo", boardStatus: "Exemplo de CRM", recordOne: "Interesse em participar", recordOneSub: "Próximo passo explicado à família", recordOneTag: "Participação", recordTwo: "Possível parceria", recordTwoSub: "Retorno combinado com a equipe", recordTwoTag: "Parceria", recordThree: "Preferência registrada", recordThreeSub: "Consentimento e acesso definidos", recordThreeTag: "Cuidado", boardNote: "Um retrato simples de como a equipe pode acolher cada interesse e dar continuidade às conversas.",
+        noteEyebrow: "", noteTitle: "Uma presença digital que aproxima a ONG das famílias.", noteText: "Meu trabalho com a Gina une CRM, conteúdo e relacionamento. Posso aplicar esse olhar à presença digital da ONG. Se fizer sentido, me chama para um papo breve.", noteCta: "Conversar comigo <span aria-hidden=\"true\">↗</span>", footerNote: "© 2026 ViraFolha · Conceito visual por Isaac Antunes", footerConcept: "Sobre este conceito"
+      },
+      en: {
+        pageTitle: "ViraFolha | nature and discovery · concept", pageDescription: "Bilingual homepage concept for an organization connecting families with nature.", ogTitle: "ViraFolha | childhood in touch with nature", ogDescription: "A homepage concept for an organization connecting childhood and nature.",
+        skip: "Skip to content", socialPendingLabel: "Social icon preview; official channels and links to be confirmed with the organization", socialPending: "Social links to come", concept: "CONCEPT STUDY · ViraFolha", toolsLabel: "Accessibility and language controls", access: "Accessibility", smaller: "Decrease text size", larger: "Increase text size", contrast: "Enable high contrast", language: "Mudar para português", navLabel: "Main navigation", navIdea: "The idea", navExperiences: "Learning", navChannels: "Contacts", navPaths: "Get involved", navCare: "Care and transparency", navCta: "Be part of it <span aria-hidden=\"true\">↗</span>",
+        heroEyebrow: "Nature, discovery and connection", heroTitle: "Childhood feels even better", heroAccent: "when nature is part of everyday life.", heroLead: "Nature sparks curiosity, builds connection and turns everyday moments into shared discoveries.", heroPrimary: "Explore ways to take part", heroSecondary: "Why this connection matters", heroAlt: "Original illustration of leaves and a canopy in green and yellow.", mascotAlt: "Concept mascot: a curious little seedling with a sprout, backpack and magnifying glass.", 
+        ideaEyebrow: "Nature, a place we share", ideaTitle: "Nature is part of our shared home.", ideaP1: "Learning becomes tangible when we observe, experiment and ask questions. An organization can bring families and communities closer to this learning and nurture care for the places we share.", ideaQuote: "See how learning begins with lived experience ↗", storyAlt: "Illustration of roots below the soil connected to leaves above ground.",
+        experienceEyebrow: "Learning happens through living", experienceTitle: "Learning with nature", experienceLead: "Curiosity, connection and care can turn everyday moments into meaningful learning.", ideaOneTitle: "Explore", ideaOne: "Look closely, compare, experiment and discover new questions.", ideaTwoTitle: "Build connections", ideaTwo: "Learn with family, community and the places we share.", ideaThreeTitle: "Care together", ideaThree: "Bring schools, families and communities together around caring for nature.", hypothesis: "Explore, connect and care together: three threads that can guide this story.", channelEyebrow: "Visual examples · no active contact", channelTitle: "Contacts", channelLead: "The same identity follows everyday discoveries by email, phone and watch.", newsletterLabel: "Newsletter · demo", newsletterTitle: "Updates to follow along", newsletterNote: "A small pause to share new discoveries with your family.", newsletterEmailLabel: "Your email", newsletterPlaceholder: "you@example.com", newsletterConsent: "I agree to receive email updates.", newsletterButton: "See example", newsletterStatus: "No subscription will be created.", newsletterNoConsent: "Select the demo consent to see the sample message.", newsletterInvalidEmail: "Enter a valid email only to complete this demo; nothing will be sent.", newsletterNoSend: "Demo consent selected. Nothing was stored or sent, and no subscription was created.", emailCardLabel: "Visual email example; not a real contact or active message", smsCardLabel: "Visual SMS example; not a real contact or active message", emailLabel: "Email example · concept", emailHeadline: "Discoveries grow in everyday life.", emailBody: "A closer look can reveal a world of detail. Each message can bring one small discovery into everyday life.", emailLink: "Explore the idea", emailNote: "A short letter to bring childhood curiosity into everyday life.", smsLabel: "SMS example · concept", watchMessage: "The shadow moved. Who noticed?", smsBody: "The shadow moved. Who noticed first? 🌿", smsTime: "A thought to take home", smsNote: "A short note, from one screen to the next.",
+        pathsEyebrow: "A path for every intention", pathsTitle: "Which path feels right for you?", pathsLead: "For families and educators, a way to take part. For supporters, a starting point for a partnership conversation.", familyLabel: "Families and educators", familyTitle: "I want more nature experiences for my family.", familyText: "Experiences that make room for imagination, connection and independent discovery.", familyLink: "See family possibilities <span aria-hidden=\"true\">↗</span>", partnerLabel: "Supporters and partners", partnerTitle: "I want my organization to join this work.", partnerText: "Schools, collectives and supporters can help create more opportunities to connect and learn with nature.", partnerLink: "Explore partnership options <span aria-hidden=\"true\">↗</span>",
+        careEyebrow: "Trust is part of the experience", careTitle: "Care for people. Clarity at every step.", careText: "Trust grows when families find clear information, a welcoming team and room to take part. Every conversation can open new discoveries, strengthen bonds and bring the community closer to nature.", boardLabel: "Visual example of how a CRM could organize interests and next steps.", boardTitle: "Conversations with a next step", boardStatus: "CRM concept", recordOne: "Interest in taking part", recordOneSub: "Next step explained to the family", recordOneTag: "Participation", recordTwo: "Potential partnership", recordTwoSub: "Follow-up agreed with the team", recordTwoTag: "Partnership", recordThree: "Preference recorded", recordThreeSub: "Consent and access defined", recordThreeTag: "Care", boardNote: "A simple view of how the team can welcome each interest and carry conversations forward.",
+        noteEyebrow: "", noteTitle: "A digital presence that brings the organization closer to families.", noteText: "My work with Gina brings together CRM, content and relationship design. I can apply that perspective to the organization’s digital presence. If this feels relevant, let’s talk.", noteCta: "Talk with me <span aria-hidden=\"true\">↗</span>", footerNote: "© 2026 ViraFolha · Visual concept by Isaac Antunes", footerConcept: "About this concept"
+      }
+    };
+    const root = document.documentElement;
+    let language = "pt";
+    let fontScale = 100;
+    const announce = (message) => { document.getElementById("control-status").textContent = message; };
+    function setLanguage(next) {
+      language = next;
+      root.lang = next === "pt" ? "pt-BR" : "en";
+      document.title = copy[next].pageTitle;
+      document.querySelector('meta[name="description"]').content = copy[next].pageDescription;
+      document.querySelector('meta[property="og:title"]').content = copy[next].ogTitle;
+      document.querySelector('meta[property="og:description"]').content = copy[next].ogDescription;
+      document.querySelectorAll("[data-i18n]").forEach((node) => { node.innerHTML = copy[next][node.dataset.i18n]; });
+      document.querySelectorAll("[data-i18n-alt]").forEach((node) => { node.alt = copy[next][node.dataset.i18nAlt]; });
+      document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => { node.placeholder = copy[next][node.dataset.i18nPlaceholder]; });
+      document.querySelectorAll("[data-i18n-aria]").forEach((node) => { node.setAttribute("aria-label", copy[next][node.dataset.i18nAria]); });
+      const contrastButton = document.getElementById("contrast");
+      if (document.body.classList.contains("high-contrast")) contrastButton.setAttribute("aria-label", next === "pt" ? "Desativar alto contraste" : "Disable high contrast");
+      document.getElementById("lang-toggle").textContent = next === "pt" ? "EN" : "PT";
+      announce(next === "pt" ? "Idioma alterado para português." : "Language changed to English.");
+    }
+    document.getElementById("lang-toggle").addEventListener("click", () => setLanguage(language === "pt" ? "en" : "pt"));
+    document.getElementById("newsletter-demo-button").addEventListener("click", () => {
+      const consent = document.getElementById("newsletter-consent").checked;
+      const email = document.getElementById("newsletter-email");
+      const validEmail = Boolean(email.value) && email.checkValidity();
+      const message = !consent ? copy[language].newsletterNoConsent : (!validEmail ? copy[language].newsletterInvalidEmail : copy[language].newsletterNoSend);
+      email.setAttribute("aria-invalid", String(consent && !validEmail));
+      document.getElementById("newsletter-status").textContent = message;
+    });
+    document.getElementById("newsletter-email").addEventListener("input", (event) => {
+      event.currentTarget.removeAttribute("aria-invalid");
+      document.getElementById("newsletter-status").textContent = copy[language].newsletterStatus;
+    });
+    document.getElementById("newsletter-consent").addEventListener("change", () => {
+      document.getElementById("newsletter-status").textContent = copy[language].newsletterStatus;
+    });
+    document.getElementById("smaller").addEventListener("click", () => {
+      fontScale = Math.max(90, fontScale - 5); root.style.setProperty("--font-scale", fontScale + "%");
+      announce(language === "pt" ? "Tamanho do texto: " + fontScale + " por cento." : "Text size: " + fontScale + " percent.");
+    });
+    document.getElementById("larger").addEventListener("click", () => {
+      fontScale = Math.min(125, fontScale + 5); root.style.setProperty("--font-scale", fontScale + "%");
+      announce(language === "pt" ? "Tamanho do texto: " + fontScale + " por cento." : "Text size: " + fontScale + " percent.");
+    });
+    document.getElementById("contrast").addEventListener("click", (event) => {
+      const enabled = document.body.classList.toggle("high-contrast");
+      event.currentTarget.setAttribute("aria-pressed", String(enabled));
+      event.currentTarget.setAttribute("aria-label", enabled ? (language === "pt" ? "Desativar alto contraste" : "Disable high contrast") : copy[language].contrast);
+      announce(enabled ? (language === "pt" ? "Alto contraste ativado." : "High contrast enabled.") : (language === "pt" ? "Alto contraste desativado." : "High contrast disabled."));
+    });
+  </script>
+</body>
+</html>

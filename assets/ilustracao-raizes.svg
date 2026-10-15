@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760">
+  <defs><linearGradient id="soil" x2="1" y2="1"><stop stop-color="#eff6e9"/><stop offset="1" stop-color="#d8f49a"/></linearGradient><pattern id="dots" width="36" height="36" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1.4" fill="#0d5738" opacity=".22"/></pattern></defs>
+  <rect width="1000" height="760" fill="url(#soil)"/><rect width="1000" height="760" fill="url(#dots)"/>
+  <path d="M0 425Q190 368 346 427T675 414T1000 398V760H0Z" fill="#0d5738"/>
+  <path d="M489 0v347m0-138Q335 151 252 43m237 163Q627 115 709 28M489 278Q346 263 187 180m302 90Q654 241 827 127" fill="none" stroke="#55b849" stroke-width="18" stroke-linecap="round"/>
+  <g fill="#55b849"><path d="M236 53Q300 2 374 39 325 111 236 53ZM673 33Q744-8 809 31 754 100 673 33ZM166 177Q246 121 316 169 255 239 166 177ZM778 126Q857 73 920 121 869 189 778 126Z"/></g>
+  <g fill="none" stroke="#d8f49a" stroke-width="14" stroke-linecap="round"><path d="M489 409q-15 139-138 247t-111 104M489 413q54 129 14 238t-6 112M491 418q136 98 215 114t159 103M490 434q-113 89-116 166t-72 109M497 455q174 50 222 158"/></g>
+  <circle cx="489" cy="405" r="31" fill="#f2c94c"/>
+</svg>
